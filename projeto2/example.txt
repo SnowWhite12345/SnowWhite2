@@ -1,0 +1,4 @@
+git add .
+git add "Nome do Arquivo"
+git commit - m "Mensagem"
+git push
