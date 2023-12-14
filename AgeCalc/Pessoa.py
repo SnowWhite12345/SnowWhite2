@@ -1,26 +1,27 @@
 from datetime import datetime as dt
-class Pessoa:
-    def __init__(self, datanasc:dt, nome: str)-> None:
-        self.__nome = nome
-        self.__datanasc = datanasc
 
+class Pessoa:
+    
+    def __init__(self, nome: str, dataNascimento: int):
+        self.__nome = nome
+        self.__dataNascimento = dataNascimento
+        
     @property
     def nome(self):
         return self.__nome
     
     @nome.setter
-    def nome(self, nome:str):
+    def nome(self, nome: str):
         self.__nome = nome
 
     @property
-    def datanasc(self):
-        return self.__datanasc
+    def dataNascimento(self):
+        return self.__dataNascimento
     
-    @datanasc.setter
-    def datanasc(self, datanasc:dt):
-        self.__datanasc = datanasc
+    @dataNascimento.setter
+    def dataNascimento(self, dataNascimento: int):
+        self.__dataNascimento = dataNascimento
 
     def idade(self):
         hoje = dt.today()
-        return hoje.year - self.__datanasc.year
-    
+        return hoje.year - self.__dataNascimento
