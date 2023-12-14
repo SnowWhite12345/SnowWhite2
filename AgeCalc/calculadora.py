@@ -13,7 +13,7 @@ def getInput():
     try:    
         humano = Pessoa(campoNome.get(), int(campoAno.get()))
         limpar()
-        mb.showinfo(title = "Resultado", message = f"Olá {humano.nome}, você tem {humano.idade()} anos de idade")
+        mb.showinfo(title = "Resultado", message = f"Olá {humano.nome}, você tem {humano.idade()} anos de idade.")
     except ValueError:
         mb.showerror(title = "Erro!", message = f"Informe apenas números no campo ano")
 
